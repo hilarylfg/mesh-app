@@ -1,0 +1,6 @@
+﻿namespace mesh_app.Models;
+
+public class Grade
+{
+    
+}
