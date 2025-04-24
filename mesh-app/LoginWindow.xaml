@@ -5,8 +5,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:mesh_app"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
+        Title="Вход" Height="420" Width="420"
+        WindowStartupLocation="CenterScreen" Background="#F4F7FB">
+    <Window.Resources>
+        <ResourceDictionary Source="MeshStyles.xaml"/>
+    </Window.Resources>
     <Grid>
-        
+        <Border Background="{StaticResource MeshBlue}" Height="70" VerticalAlignment="Top" CornerRadius="0,0,20,20">
+            <TextBlock Text="Mesh — Вход" Foreground="White" FontWeight="Bold" FontSize="28"
+                       VerticalAlignment="Center" Margin="30,0,0,0"/>
+        </Border>
+        <StackPanel VerticalAlignment="Center" Margin="30,90,30,30" Background="White" >
+            <Label Content="Логин:" FontWeight="Bold" Foreground="#2F80ED"/>
+            <TextBox Name="LoginBox" Style="{StaticResource MeshTextBox}" />
+            <Label Content="Пароль:" FontWeight="Bold" Foreground="#2F80ED"/>
+            <PasswordBox Name="PasswordBox" Style="{StaticResource MeshPasswordBox}" />
+            <Button Content="Войти" Style="{StaticResource MeshMainButton}" Margin="0,25,0,0" Height="40" Click="LoginButton_Click"/>
+            <Button Content="Регистрация" Style="{StaticResource MeshMainButton}" Background="#27AE60" Margin="0,10,0,0" Height="40" Click="RegisterButton_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

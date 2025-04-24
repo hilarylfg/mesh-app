@@ -5,8 +5,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:mesh_app"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="800">
+        Title="Администратор" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen" Background="#F4F7FB">
+    <Window.Resources>
+        <ResourceDictionary Source="MeshStyles.xaml"/>
+    </Window.Resources>
     <Grid>
-        
+        <Border Background="{StaticResource MeshBlue}" Height="70" VerticalAlignment="Top" CornerRadius="0,0,20,20">
+            <TextBlock Text="МЭШ — Администрирование" Foreground="White" FontWeight="Bold" FontSize="28"
+                       VerticalAlignment="Center" Margin="30,0,0,0"/>
+        </Border>
+        <TabControl Margin="20,90,20,20" Background="{StaticResource MeshGray}">
+            <TabItem Header="Пользователи">
+                <DataGrid Name="UsersGrid" Style="{StaticResource MeshDataGrid}" AutoGenerateColumns="True"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
